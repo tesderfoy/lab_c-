@@ -26,8 +26,8 @@ namespace lab_5
 
 
             readers[0].returnBook(1);
-            readers[0].returnBook("Война и мир");
-            readers[2].takeBook("Гроза " + "Обломов");
+            readers[0].returnBook("\"Война и мир\"");
+            readers[2].takeBook("\"Гроза \", \"Обломов\" ");
             readers[1].returnBook(2);
 
 
