@@ -7,8 +7,8 @@ namespace lab_6
         static void Main(string[] args)
         {
 
-            Horse horse = new Horse("Элина", 18, "конюшне", "пиво");
-            Cat cat = new Cat("Хюрэм", 2, "лечебнице", "рыбу");
+            Horse horse = new Horse("Элина", 18, "конюшне", "сено");
+            Cat cat = new Cat("Хюрэм", 2, "лечебнице", "рыпку");
 
             Vetenar vetenar = new Vetenar();
             vetenar.treatAnimal(horse);
@@ -19,6 +19,7 @@ namespace lab_6
             horse.makeNoise();
 
             vetenar.treatAnimal(cat);
+            cat.makeNoise();
         
         }
     }
@@ -27,59 +28,57 @@ namespace lab_6
     {
        public string food;
        public string location;
+       public string type;
 
-        public Animal(string location, string food)
+        public Animal(string location, string food, string type)
         {
             this.location = location;
             this.food = food;
-            
+            this.type = type;
         }
 
 
         public virtual void makeNoise()
         {
-            Console.Write("Животное ");
+            Console.WriteLine($"{type} издает звук");
         }
         public virtual void makeEat()
         {
-            Console.WriteLine(" ест " + food);
+            Console.WriteLine($" ест {food}");
         }
         public virtual void makeSleep()
         {
-            Console.WriteLine(" спит в " + location);
+            Console.WriteLine($" спит в {location}");
         }
     }
     class Dog : Animal
     {
-        public string name;
+        public string name { get; set;}
         public int age;
         string song = "рычит";
-        string type = "Собака";
-
         
-
-        
-        public Dog(string name, int age, string location, string food) : base(location, food)
+        public Dog(string name, int age, string location, string food, string type = "собака") : base(location, food, type)
         {
             this.name = name;
             this.age = age;
+            
         }
-        public string Name { get; set; }
+        
 
         public override void makeNoise()
         {
-            base.makeNoise();
-            Console.WriteLine(name + " "+ song);
+            Console.WriteLine($"{name} {song}");
         }
+        
 
         public override void makeEat()
         {
-            Console.Write(type + " " + name);
+            Console.Write(name);
             base.makeEat();
         }
         public override void makeSleep()
         {
-            Console.Write(type + " " + name);
+            Console.Write(name);
             base.makeSleep();
         }
 
@@ -89,10 +88,10 @@ namespace lab_6
         public string name;
         public int age;
         string song = "мявукает";
-        string type = "Кошка";
+       
 
-        
-        public Cat(string name, int age, string location, string food) : base(location, food)
+
+        public Cat(string name, int age, string location, string food, string type="кошка") : base(location, food, type)
         {
             this.name = name;
             this.age = age;
@@ -100,19 +99,19 @@ namespace lab_6
         public string Name { get; set; }
         public override void makeNoise()
         {
-            base.makeNoise();
-            Console.WriteLine(name + " " + song);
+            
+            Console.WriteLine($"{name}  {song}");
         }
 
 
         public override void makeEat()
         {
-            Console.Write(type + " " + name);
+            Console.Write(name);
             base.makeEat();
         }
         public override void makeSleep()
         {
-            Console.Write(type + " " + name);
+            Console.Write(name);
             base.makeSleep();
         }
 
@@ -123,12 +122,12 @@ namespace lab_6
         public string name;
         public int age;
         string song = "фырчит";
-        string type = "Лошадь";
-       
+   
 
-       
 
-        public Horse(string name, int age, string location, string food) : base(location, food)
+
+
+        public Horse(string name, int age, string location, string food, string type = "лошадь") : base(location, food, type)
         {
             this.name = name;
             this.age = age;
@@ -138,18 +137,19 @@ namespace lab_6
 
         public override void makeNoise()
         {
-            base.makeNoise();
-            Console.WriteLine(name + " " + song);
+            
+            Console.WriteLine($"{name}  {song}");
+            
         }
 
         public override void makeEat()
         {
-            Console.Write(type + " " + name);
+            Console.Write(name);
             base.makeEat();
         }
         public override void makeSleep()
         {
-            Console.Write(type + " " + name);
+            Console.Write(name);
             base.makeSleep();
         }
     }
@@ -158,7 +158,7 @@ namespace lab_6
    {
        public void treatAnimal(Animal animal)
        {
-            Console.WriteLine("Животное ест " + animal.food + " в " + animal.location);
+            Console.WriteLine($"{animal.type} ест   {animal.food}  в  {animal.location}");
        }
    }
 }
