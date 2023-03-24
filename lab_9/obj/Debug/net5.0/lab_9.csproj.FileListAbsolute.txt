@@ -1,0 +1,16 @@
+C:\Users\pavel\source\repos\lab_9\bin\Debug\net5.0\lab_9.exe
+C:\Users\pavel\source\repos\lab_9\bin\Debug\net5.0\lab_9.deps.json
+C:\Users\pavel\source\repos\lab_9\bin\Debug\net5.0\lab_9.runtimeconfig.json
+C:\Users\pavel\source\repos\lab_9\bin\Debug\net5.0\lab_9.runtimeconfig.dev.json
+C:\Users\pavel\source\repos\lab_9\bin\Debug\net5.0\lab_9.dll
+C:\Users\pavel\source\repos\lab_9\bin\Debug\net5.0\ref\lab_9.dll
+C:\Users\pavel\source\repos\lab_9\bin\Debug\net5.0\lab_9.pdb
+C:\Users\pavel\source\repos\lab_9\obj\Debug\net5.0\lab_9.csproj.AssemblyReference.cache
+C:\Users\pavel\source\repos\lab_9\obj\Debug\net5.0\lab_9.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pavel\source\repos\lab_9\obj\Debug\net5.0\lab_9.AssemblyInfoInputs.cache
+C:\Users\pavel\source\repos\lab_9\obj\Debug\net5.0\lab_9.AssemblyInfo.cs
+C:\Users\pavel\source\repos\lab_9\obj\Debug\net5.0\lab_9.csproj.CoreCompileInputs.cache
+C:\Users\pavel\source\repos\lab_9\obj\Debug\net5.0\lab_9.dll
+C:\Users\pavel\source\repos\lab_9\obj\Debug\net5.0\ref\lab_9.dll
+C:\Users\pavel\source\repos\lab_9\obj\Debug\net5.0\lab_9.pdb
+C:\Users\pavel\source\repos\lab_9\obj\Debug\net5.0\lab_9.genruntimeconfig.cache
