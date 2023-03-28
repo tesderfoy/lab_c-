@@ -79,7 +79,7 @@ namespace lab_9
             }
             public void Print()
             {
-                foreach (object a in array)
+                foreach (var a in array)
                 {
                     Console.Write(a + " ");
                 }
