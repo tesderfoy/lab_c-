@@ -7,23 +7,24 @@ namespace lab_9
     {
         static void Main(string[] args)
         {
+            User oleg = new("Oleg.2@gmail.com","qazjfu8Nund");
+            User marta = new("marta_killer.some@gmail.com", "difh3dwi8n");
 
-            Log<string> log = new Log<string>();
-            Password password = new Password();
-            log.Add("Login");
-            password.Add("Psa");
+            oleg.PrintUser();
+            Console.WriteLine();
+            marta.PrintUser();
 
-            log.Print();
-            password.Print();
-
+            marta.logArray.lenghtArray();
             
+
+
         }
         public class Array<T>
         {
-            T[] array;
-            public Array()
+           public T[] array;
+            public Array(T[] array)
             {
-                array = new T[0];
+                this.array = array;
             }
             public void Add(T element)
             {
@@ -85,11 +86,36 @@ namespace lab_9
                 Console.WriteLine();
             }
         }
+
+        public class User
+        {
+            string login { get; set; }
+            string password { get; set; }
+            public Log<string> logArray = new Log<string>();
+            public Password passwordArray = new Password();
+
+            public User(string login, string password)
+            {
+                this.login = login;
+                this.password = password;
+                logArray.Add(login);
+                passwordArray.Add(password);
+            }
+            public void PrintUser()
+            {
+                Console.WriteLine("Логин:");
+                logArray.Print();
+                Console.WriteLine("Пароль:");
+                passwordArray.Print();
+            }
+
+
+        }
         public class Log<T> : Array<T>
         {
             
             
-            public Log() 
+            public Log(params T[] array) : base(array)
             {
                 
             }
@@ -97,7 +123,7 @@ namespace lab_9
         public class Password : Array<string>
         {
             
-            public Password()
+            public Password(params string[] array) : base(array)
             {
                 
             }
